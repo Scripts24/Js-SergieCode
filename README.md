@@ -1,0 +1,1 @@
+## Repositorio de mini proyectos de javascript correspondiente al tutorial de [Sergie Code](https://www.youtube.com/watch?v=N8Xt5rP_DUo&t=15018s) 
