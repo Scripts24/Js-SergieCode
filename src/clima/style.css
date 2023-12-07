@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding   : 0;
+    margin    : 0;
+    outline: none;
+    border          : none;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background: url(./img/bg.jpg) no-repeat center center/cover;
+}
+
+.contenedor {
+    max-width       : 500px;
+    margin          : 50px auto;
+    padding         : 20px;
+    text-align      : center;
+    background-color: #d2f7f5;
+    box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #664caf;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding  : 10px;
+    font-size: 16px;
+    width    : 70%;
+    border: 2px solid #664caf;
+}
+
+button {
+    padding         : 10px 20px;
+    font-size       : 16px;
+    background-color: #664caf;
+    color           : #ffffff;
+    cursor          : pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#datosClima {
+    margin-top: 20px;
+    font-size : 18px;
+}
