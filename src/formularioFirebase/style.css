@@ -9,20 +9,34 @@
 }
 
 body {
-    height          : 100vh;
-    font-family     : 'Lato', sans-serif;
-    display: flex;
+    height         : 100vh;
+    font-family    : 'Lato', sans-serif;
+    display        : flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items    : center;
+    flex-direction : column;
+    background-image: linear-gradient(40deg,
+            hsl(344deg 100% 20%) 0%,
+            hsl(320deg 77% 25%) 27%,
+            hsl(308deg 71% 28%) 41%,
+            hsl(300deg 68% 31%) 50%,
+            hsl(294deg 68% 36%) 55%,
+            hsl(291deg 68% 40%) 59%,
+            hsl(288deg 68% 43%) 62%,
+            hsl(286deg 67% 47%) 65%,
+            hsl(285deg 67% 50%) 72%,
+            hsl(284deg 76% 53%) 100%);
 }
 
-.title{
+.title {
     margin-bottom: 20px;
+    color        : antiquewhite;
+    font-weight  : 800;
 }
 
 .form-group {
     margin-bottom: 15px;
+    max-width    : 320px;
 }
 
 label {
@@ -36,18 +50,22 @@ input[type="password"] {
     padding      : 5px;
     border-radius: 5px;
     border       : 1px solid #ccc;
+    width        : 100%;
 }
 
 button[type="submit"] {
     padding         : 10px 20px;
-    background-color: #4CAF50;
+    background-color: #35053b;
     color           : #fff;
     border-radius   : 5px;
     cursor          : pointer;
 }
 
 .error-message {
-    color     : red;
-    font-size : 12px;
-    margin-top: 5px;
+    color      : red;
+    font-size  : 14px;
+    font-weight: bold;
+    background : #fff;
+    margin-top : 5px;
+    width      : 100%;
 }
