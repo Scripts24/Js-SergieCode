@@ -1,3 +1,28 @@
+//const firebase = require('firebase')
+//require('firebase/firestore')
+
+//import firebase from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js';
+//import 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js';
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://support.google.com/firebase/answer/7015592
+const firebaseConfig = {
+    apiKey: "AIzaSyAsSlfB0hBw5Gfh6YtR159_UhJNEcSte_4",
+    authDomain: "form-datos.firebaseapp.com",
+    projectId: "form-datos",
+    storageBucket: "form-datos.appspot.com",
+    messagingSenderId: "154189285119",
+    appId: "1:154189285119:web:7b459cbf86fa8d12d3aeca",
+    measurementId: "G-RLHDF1WDVN"
+  };
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+//console.log("Firebase initialized")
+
+// Initialize Firestore
+const db = firebase.firestore();
+//console.log("Firestore initialized");
 
 document.getElementById('formulario').addEventListener('submit', (event) => {
     event.preventDefault()
@@ -48,7 +73,20 @@ document.getElementById('formulario').addEventListener('submit', (event) => {
 
     if (!errorNombre.textContent && !emailError.textContent && !contrasenaError.textContent) {
 
-        alert('El formulario se ha enviado con éxito')
-        document.getElementById('formulario').reset()
+
+        db.collection("users").add({
+            nombre: entradaNombre.value,
+            email: emailEntrada.value,
+            password: contrasenaEntrada.value
+        })
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+            alert('El formulario se ha enviado con éxito');
+            document.getElementById('formulario').reset();
+        })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        });
+        
     }
 })
